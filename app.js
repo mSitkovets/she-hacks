@@ -1,9 +1,6 @@
 var http = require('http'),
 fs = require('fs');
 
-const hostname = '127.0.0.1';
-const port = 3000;
-
 fs.readFileSync('./index.html', function (err, html) {
     if (err) {
         throw err; 
