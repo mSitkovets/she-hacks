@@ -27,7 +27,7 @@
 <body style="background-color: #C7DFC5; color:#548687">
     <h1 style="margin-left: 30px; color: #2F2504">Hello
         <span id="name">Maria</span>, your balance is: $
-                <span id="balance">500</span>
+        <span id="balance">500</span>
     </h1>
     <br>
 
@@ -212,50 +212,50 @@
                     <br>
                     <script>
                         function outro(balance, sustainability_score) {
-                            if(balance <= 20){
-                                let final = "You ended with barely any money, if any, left. You need to learn how to budget better, or consider getting a new form of income.";
+                            if (balance <= 20) {
+                                let final =
+                                    "You ended with barely any money, if any, left. You need to learn how to budget better, or consider getting a new form of income.";
                                 let para = document.createElement("p");
                                 let node1 = document.createTextNode(final);
                                 para.appendChild(node1);
                                 let element3 = document.getElementById("final");
                                 element3.appendChild(para);
-                            }
-                            else if(balance < 200){
+                            } else if (balance < 200) {
                                 let final = "You ended with some money. That's good! Keep saving up."
                                 let para = document.createElement("p");
                                 let node1 = document.createTextNode(final);
                                 para.appendChild(node1);
                                 let element3 = document.getElementById("final");
                                 element3.appendChild(para);
-                            }
-                            else{
+                            } else {
                                 let final = "You ended with quite some money. May I suggest looking into investments?";
-                                    let para = document.createElement("p");
+                                let para = document.createElement("p");
                                 let node1 = document.createTextNode(final);
                                 para.appendChild(node1);
                                 let element3 = document.getElementById("final");
                                 element3.appendChild(para);
                             }
-                            
 
-                            if(sustainability_score > 90){
-                                let final = "You're pretty sustainable, good job! Next step: encourage others to be so as well.";
+
+                            if (sustainability_score > 90) {
+                                let final =
+                                    "You're pretty sustainable, good job! Next step: encourage others to be so as well.";
                                 let para = document.createElement("p");
                                 let node3 = document.createTextNode(final);
                                 para.appendChild(node3);
                                 let element4 = document.getElementById("final");
                                 element4.appendChild(para);
-                            }
-                            else if (sustainability_score > 50){
-                                let final = "You're somewhat sustainable. Remember this is your planet. Take care of it.";
+                            } else if (sustainability_score > 50) {
+                                let final =
+                                    "You're somewhat sustainable. Remember this is your planet. Take care of it.";
                                 let para = document.createElement("p");
                                 let node3 = document.createTextNode(final);
                                 para.appendChild(node3);
                                 let element4 = document.getElementById("final");
                                 element4.appendChild(para);
-                            }
-                            else{
-                                let final = "You're not sustainable. It can be difficult, but do your best to make sustainable choices!";
+                            } else {
+                                let final =
+                                    "You're not sustainable. It can be difficult, but do your best to make sustainable choices!";
                                 let para = document.createElement("p");
                                 let node3 = document.createTextNode(final);
                                 para.appendChild(node3);
@@ -265,9 +265,11 @@
                         }
                     </script>
                     <button type="button" href="#carouselExampleControls" class="btn btn-light"
-                        style="width:250px; font-size:25px;" data-slide="next" onclick="outro(balance_amount, sustainability_score)">
+                        style="width:250px; font-size:25px;" data-slide="next"
+                        onclick="outro(balance_amount, sustainability_score)">
                         Click me!
                     </button>
+                    <br>
                 </div>
             </div>
 
@@ -287,13 +289,13 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-        </script>
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-        </script>
+    </script>
     <script>
         var carouselLength = $('.carousel-item').length - 1;
 
@@ -351,7 +353,9 @@
 
         //style
         var elem = document.createElement('style');
-        elem.appendChild(document.createTextNode('body p { margin-left:500px; margin-right:500px; padding:20px; background: #FFEFD3; color: #2F2504; }'));
+        elem.appendChild(document.createTextNode(
+            'body p { margin-left:500px; margin-right:500px; padding:20px; background: #FFEFD3; color: #2F2504; }'
+        ));
 
         // appending another rules
 
@@ -484,7 +488,7 @@
         throwout.addEventListener("click", function () {
             giveFeedback(1, 5.00,
                 "Consider repurposing or donating clothing that is the wrong size. Throwing it out creates a lot of waste.",
-                "q7", [repurpose, donate, throwout, closet],04);
+                "q7", [repurpose, donate, throwout, closet], 04);
         });
         repurpose.addEventListener("click", function () {
             giveFeedback(1, 1.00,
