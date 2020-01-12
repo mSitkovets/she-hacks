@@ -206,12 +206,66 @@
             <!-- outro -->
             <div class="carousel-item"
                 style="width: 100%; height: 600px; vertical-align: middle; text-align: center; padding: 70px 0;">
-                <div class="align-middle">
+                <div class="align-middle" id="final">
                     <h1><b>Result</b></h1>
                     <h3>Click the button to get you overall results and feedback!</h3>
                     <br>
+                    <script>
+                        function outro(balance, sustainability_score) {
+                            if(balance <= 20){
+                                let final = "You ended with barely any money, if any, left. You need to learn how to budget better, or consider getting a new form of income.";
+                                let para = document.createElement("p");
+                                let node1 = document.createTextNode(final);
+                                para.appendChild(node1);
+                                let element3 = document.getElementById("final");
+                                element3.appendChild(para);
+                            }
+                            else if(balance < 200){
+                                let final = "You ended with some money. That's good! Keep saving up."
+                                let para = document.createElement("p");
+                                let node1 = document.createTextNode(final);
+                                para.appendChild(node1);
+                                let element3 = document.getElementById("final");
+                                element3.appendChild(para);
+                            }
+                            else{
+                                let final = "You ended with quite some money. May I suggest looking into investments?";
+                                    let para = document.createElement("p");
+                                let node1 = document.createTextNode(final);
+                                para.appendChild(node1);
+                                let element3 = document.getElementById("final");
+                                element3.appendChild(para);
+                            }
+                            
+
+                            if(sustainability_score > 90){
+                                let final = "You're pretty sustainable, good job! Next step: encourage others to be so as well.";
+                                let para = document.createElement("p");
+                                let node3 = document.createTextNode(final);
+                                para.appendChild(node3);
+                                let element4 = document.getElementById("final");
+                                element4.appendChild(para);
+                            }
+                            else if (sustainability_score > 50){
+                                let final = "You're somewhat sustainable. Remember this is your planet. Take care of it.";
+                                let para = document.createElement("p");
+                                let node3 = document.createTextNode(final);
+                                para.appendChild(node3);
+                                let element4 = document.getElementById("final");
+                                element4.appendChild(para);
+                            }
+                            else{
+                                let final = "You're not sustainable. It can be difficult, but do your best to make sustainable choices!";
+                                let para = document.createElement("p");
+                                let node3 = document.createTextNode(final);
+                                para.appendChild(node3);
+                                let element4 = document.getElementById("final");
+                                element4.appendChild(para);
+                            };
+                        }
+                    </script>
                     <button type="button" href="#carouselExampleControls" class="btn btn-light"
-                        style="width:250px; font-size:25px;" data-slide="next">
+                        style="width:250px; font-size:25px;" data-slide="next" onclick="outro(balance_amount, sustainability_score)">
                         Click me!
                     </button>
                 </div>
@@ -268,12 +322,13 @@
         });
     </script>
     <script>
-
+        let sustainability_score = 100;
         let balance_amount = 500;
 
-        function giveFeedback(num, cost, feedback, id, choices) {
+        function giveFeedback(num, cost, feedback, id, choices, suscore) {
             let moneySpent = num * cost * 4;
             balance_amount -= moneySpent;
+            sustainability_score -= suscore;
             document.getElementById("balance").innerHTML = balance_amount;
 
             let para = document.createElement("p");
@@ -309,17 +364,17 @@
         starbucks.addEventListener("click", function () {
             giveFeedback(5, 3.00,
                 "Try going less often, and if you really need your morning coffee, try bringing your own reusable tumbler - they'll often put your drink in your tumbler for you if you ask nicely!",
-                "q1", [starbucks, tims, hipster]);
+                "q1", [starbucks, tims, hipster], 4);
         });
         tims.addEventListener("click", function () {
             giveFeedback(5, 5.00,
                 "Try going less often if you can! It's great you're choosing the sustainable option, but that's unfortunately going to cost you.",
-                "q1", [starbucks, tims, hipster]);
+                "q1", [starbucks, tims, hipster], 1);
         });
         hipster.addEventListener("click", function () {
             giveFeedback(5, 2.00,
                 "Try going less often if you can; if you really need your morning coffee, consider brewing your own or choosing an establishment with a greater commitment to sustainability.",
-                "q1", [starbucks, tims, hipster]);
+                "q1", [starbucks, tims, hipster], 3);
         });
         //q2
         const walkbike = document.getElementById("q2a1");
@@ -329,22 +384,22 @@
         walkbike.addEventListener("click", function () {
             giveFeedback(5, 0.00, "Good choice! Keep it up :)", "q2", [walkbike, publictransit, carpool,
                 drive
-            ]);
+            ], 0);
         });
         publictransit.addEventListener("click", function () {
             giveFeedback(5, 3.00,
                 "Good on you for being sustainable! If it's a short distance, consider walking or biking instead; otherwise, taking public transit every day is unfortunately going to cost you.",
-                "q2", [walkbike, publictransit, carpool, drive]);
+                "q2", [walkbike, publictransit, carpool, drive], 3);
         });
         carpool.addEventListener("click", function () {
             giveFeedback(5, 1.00,
                 "Good choice. The more people who can carpool together, the better - just make sure you're carpooling with people who live nearby!",
-                "q2", [walkbike, publictransit, carpool, drive]);
+                "q2", [walkbike, publictransit, carpool, drive], 4);
         });
         drive.addEventListener("click", function () {
             giveFeedback(5, 2.00,
                 "Try looking for people in your area to carpool with. Driving alone may be the convenient way, but it ends up being both costly for you and the environment.",
-                "q2", [walkbike, publictransit, carpool, drive]);
+                "q2", [walkbike, publictransit, carpool, drive], 5);
         });
         //q3
         const fancy = document.getElementById("q3a1");
@@ -353,17 +408,17 @@
         fancy.addEventListener("click", function () {
             giveFeedback(5, 15.00,
                 "Consider going out less often - the costs of getting food from a restaurant rack up very quickly.",
-                "q3", [fancy, fastfood, casual]);
+                "q3", [fancy, fastfood, casual], 1);
         });
         fastfood.addEventListener("click", function () {
             giveFeedback(5, 6.00,
                 "Consider home-cooked meals more often; eating out regularly costs more than you might expect, and fast food creates tons of trash.",
-                "q3", [fancy, fastfood, casual]);
+                "q3", [fancy, fastfood, casual], 5);
         });
         casual.addEventListener("click", function () {
             giveFeedback(5, 9.00,
                 "Consider going out for food less often. Instead, try learning to cook those same recipes as home. It costs both you and the environment to be eating out often.",
-                "q3", [fancy, fastfood, casual]);
+                "q3", [fancy, fastfood, casual], 3);
         });
         //q5
         const park = document.getElementById("q5a1");
@@ -373,22 +428,22 @@
         park.addEventListener("click", function () {
             giveFeedback(5, 0.00, "Good choice! Isn't the park so nice? :)", "q5", [park, movie, vroom,
                 escaperoom
-            ]);
+            ], 0);
         });
         movie.addEventListener("click", function () {
             giveFeedback(5, 12.00,
                 "Try going to the movies less often. It's overpriced and not a need; consider going to the park instead. You could even try cooking together!",
-                "q5", [park, movie, vroom, escaperoom]);
+                "q5", [park, movie, vroom, escaperoom], 2);
         });
         vroom.addEventListener("click", function () {
             giveFeedback(5, 3.00,
                 "Please consider biking or walking around aimlessly instead. Driving the car creates costs in gas, and is extremely bad for the environment.",
-                "q5", [park, movie, vroom, escaperoom]);
+                "q5", [park, movie, vroom, escaperoom], 5);
         });
         escaperoom.addEventListener("click", function () {
             giveFeedback(5, 25.00,
                 "Consider a cheaper, but equally or more sustainable, option. May I suggest cooking or baking together?",
-                "q5", [park, movie, vroom, escaperoom]);
+                "q5", [park, movie, vroom, escaperoom], 1);
         });
         //q6
         const ethical = document.getElementById("q6a2");
@@ -398,23 +453,23 @@
         ethical.addEventListener("click", function () {
             giveFeedback(1, 60.00,
                 "Make sure you aren't purchasing new clothing too often. Purchasing more than you need both depletes your savings and produces more waste in the long run.",
-                "q6", [thrift, ethical, fastfashion, designer]);
+                "q6", [thrift, ethical, fastfashion, designer], 1);
         });
         thrift.addEventListener("click", function () {
             giveFeedback(1, 6.00,
                 "This is a good choice, as long as you aren't buying too much clothing too often.", "q6", [
                     thrift, ethical, fastfashion, designer
-                ]);
+                ], 1);
         });
         fastfashion.addEventListener("click", function () {
             giveFeedback(1, 35.00,
                 "Consider getting clothing that can be worn for longer. Fast fashion moves quickly to the markets, but also very quickly to the landfills.",
-                "q6", [thrift, ethical, fastfashion, designer]);
+                "q6", [thrift, ethical, fastfashion, designer], 5);
         });
         designer.addEventListener("click", function () {
             giveFeedback(1, 250.00,
                 "Make sure you practice minimalism if you truly want to stay on top of fashion trends: have very few articles of clothing, but that are valuable to you.",
-                "q6", [thrift, ethical, fastfashion, designer]);
+                "q6", [thrift, ethical, fastfashion, designer], 4);
         });
         //q7
         const donate = document.getElementById("q7a2");
@@ -424,24 +479,24 @@
         donate.addEventListener("click", function () {
             giveFeedback(1, 0.00,
                 "This is a good choice. Reminder to make sure that the clothing you're donating is new or otherwise in good condition!",
-                "q7", [repurpose, donate, throwout, closet]);
+                "q7", [repurpose, donate, throwout, closet], 1);
         });
         throwout.addEventListener("click", function () {
             giveFeedback(1, 5.00,
                 "Consider repurposing or donating clothing that is the wrong size. Throwing it out creates a lot of waste.",
-                "q7", [repurpose, donate, throwout, closet]);
+                "q7", [repurpose, donate, throwout, closet],04);
         });
         repurpose.addEventListener("click", function () {
             giveFeedback(1, 1.00,
                 "Make sure that you're repurposing the clothing into things you will use, and not throw out too soon. If that's the case, this is an amazing choice!",
                 "q7", [
                     repurpose, donate, throwout, closet
-                ]);
+                ], 5);
         });
         closet.addEventListener("click", function () {
             giveFeedback(1, 0.00,
                 "Make a decision as to what you will do with the piece of clothing. If it just sits in your closet, you may eventually choose to throw it out, rather than give it new life.",
-                "q7", [repurpose, donate, throwout, closet]);
+                "q7", [repurpose, donate, throwout, closet], 2);
         });
     </script>
 </body>
