@@ -12,10 +12,20 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
     <title>Game</title>
+
+    <script>
+        const name = "Maria";
+        let balance = 500;
+    </script>
 </head>
 
 <body style="background-color: #8FBC94; color:#56445D">
-    <h1>Hello *name*, your balance is: *balance*</h1>
+    <h1>Hello <script>
+            document.write(name)
+        </script>, your balance is: <script>
+            document.write(balance)
+        </script>
+    </h1>
     <br>
 
     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false"
@@ -39,19 +49,19 @@
             </div>
 
             <!-- first question -->
-            <div class="carousel-item" style="width: 100%; height: 600px; vertical-align: middle;">
+            <div id="q1" class="carousel-item" style="width: 100%; height: 600px; vertical-align: middle;">
                 <div class="align-middle" style="text-align: center; padding: 70px 0;">
                     <h1 style="vertical-align: middle">Where do you go for drinks?</h1>
                     <br>
-                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q1a1"><img
                             src="http://www.pngall.com/wp-content/uploads/4/Starbucks-Cup.png" height="200"><br>
                         <h3>Starbucks</h3>
                     </button>
-                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q1a2"><img
                             src="https://projideas.com/images/tim-hortons-cup-clipart-1.png" height="200"><br>
                         <h3>Tim Hortons</h3>
                     </button>
-                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q1a3"><img
                             src="https://www.pngkey.com/png/full/297-2973186_paper-coffee-cups-png-download-coffee-cup-to.png"
                             height="200"><br>
                         <h3>Hipster Café</h3>
@@ -60,26 +70,26 @@
             </div>
 
             <!-- second question -->
-            <div class="carousel-item" style="width: 100%; height: 600px; vertical-align: middle;">
+            <div id="q2" class="carousel-item" style="width: 100%; height: 600px; vertical-align: middle;">
                 <div class="align-middle" style="text-align: center; padding: 70px 0;">
                     <h1 style="vertical-align: middle">How do you commute to school/work?</h1>
                     <br>
-                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q2a1"><img
                             src="https://static.wixstatic.com/media/2cd43b_94a8d7b8ac984de9b81f672eb95d82fd~mv2_d_1979_1399_s_2.png?dn=2cd43b_94a8d7b8ac984de9b81f672eb95d82fd~mv2_d_1979_1399_s_2.png"
                             height="100"><br>
                         <h3>Walk/Bike</h3>
                     </button>
-                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q2a2"><img
                             src="https://cdn.clipart.email/c40c028aba6dafd2ea8cb0be86848b1a_white-bus-png-clipart-best-web-clipart_2500-1733.png"
                             height="100"><br>
                         <h3>Public Transit</h3>
                     </button>
-                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q2a3"><img
                             src="https://cdn3.iconfinder.com/data/icons/hotel-information-system-1/64/Artboard_15-512.png"
                             height="100"><br>
                         <h3>Carpool</h3>
                     </button>
-                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q2a4"><img
                             src="http://pngimg.com/uploads/mercedes/mercedes_PNG80135.png" height="100"><br>
                         <h3>Drive</h3>
                     </button>
@@ -87,26 +97,26 @@
             </div>
 
             <!-- third question -->
-            <div class="carousel-item" style="width: 100%; height: 600px; vertical-align: middle;">
+            <div id="q3" class="carousel-item" style="width: 100%; height: 600px; vertical-align: middle;">
                 <div class="align-middle" style="text-align: center; padding: 70px 0;">
                     <h1 style="vertical-align: middle">Which would be your go to restaurant?</h1>
                     <br>
-                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q3a1"><img
                             src="https://static.wixstatic.com/media/2cd43b_94a8d7b8ac984de9b81f672eb95d82fd~mv2_d_1979_1399_s_2.png?dn=2cd43b_94a8d7b8ac984de9b81f672eb95d82fd~mv2_d_1979_1399_s_2.png"
                             height="100"><br>
                         <h3>Walk/Bike</h3>
                     </button>
-                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q3a2"><img
                             src="https://cdn.clipart.email/c40c028aba6dafd2ea8cb0be86848b1a_white-bus-png-clipart-best-web-clipart_2500-1733.png"
                             height="100"><br>
                         <h3>Public Transit</h3>
                     </button>
-                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q3a3"><img
                             src="https://cdn3.iconfinder.com/data/icons/hotel-information-system-1/64/Artboard_15-512.png"
                             height="100"><br>
                         <h3>Carpool</h3>
                     </button>
-                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q3a4"><img
                             src="http://pngimg.com/uploads/mercedes/mercedes_PNG80135.png" height="100"><br>
                         <h3>Drive</h3>
                     </button>
@@ -128,14 +138,14 @@
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-        crossorigin="anonymous"></script>
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+    </script>
     <script>
         var carouselLength = $('.carousel-item').length - 1;
 
@@ -161,6 +171,220 @@
                 $('.carousel-control-prev').removeClass('d-none');
                 $('.carousel-control-next').removeClass('d-none');
             }
+        });
+    </script>
+    <script>
+        function giveFeedback(num, cost, feedback, id, choices) {
+            let moneySpent = num * cost * 4;
+            balance -= moneySpent;
+
+            let para = document.createElement("p");
+            let node = document.createTextNode(
+                `The money you would spend would be $${moneySpent}/month if you spend on average $${cost} around ${num} times per week. Your monthly balance decreases to ${balance} as a result. Feedback: ${feedback}.`
+            );
+            para.appendChild(node);
+
+            let element = document.getElementById(id);
+            element.appendChild(para);
+
+            disableChoices(choices);
+        }
+
+        function disableChoices(array) {
+            array.map(a =>
+                a.disabled = true)
+        }
+        //q1
+        const starbucks = document.getElementById("q1a1");
+        const tims = document.getElementById("q1a2");
+        const hipster = document.getElementById("q1a3");
+        starbucks.addEventListener("click", function () {
+            giveFeedback(5, 3.00,
+                "Try going less often, and if you really need your morning coffee, try bringing your own reusable tumbler - they'll often put your drink in your tumbler for you if you ask nicely!",
+                "q1", [starbucks, tims, hipster]);
+        });
+        tims.addEventListener("click", function () {
+            giveFeedback(5, 5.00,
+                "Try going less often if you can! It's great you're choosing the sustainable option, but that's unfortunately going to cost you.",
+                "q1", [starbucks, tims, hipster]);
+        });
+        hipster.addEventListener("click", function () {
+            giveFeedback(5, 2.00,
+                "Try going less often if you can; if you really need your morning coffee, consider brewing your own or choosing an establishment with a greater commitment to sustainability.",
+                "q1", [starbucks, tims, hipster]);
+        });
+        //q2
+        const walkbike = document.getElementById("q2a1");
+        const publictransit = document.getElementById("q2a2");
+        const carpool = document.getElementById("q2a3");
+        const drive = document.getElementById("q2a4");
+        walkbike.addEventListener("click", function () {
+            giveFeedback(5, 0.00, "Good choice! Keep it up :)", "q2", [walkbike, publictransit, carpool,
+                drive
+            ]);
+        });
+        publictransit.addEventListener("click", function () {
+            giveFeedback(5, 3.00,
+                "Good on you for being sustainable! If it's a short distance, consider walking or biking instead; otherwise, taking public transit every day is unfortunately going to cost you.",
+                "q2", [walkbike, publictransit, carpool, drive]);
+        });
+        carpool.addEventListener("click", function () {
+            giveFeedback(5, 1.00,
+                "Good choice. The more people who can carpool together, the better - just make sure you're carpooling with people who live nearby!",
+                "q2", [walkbike, publictransit, carpool, drive]);
+        });
+        drive.addEventListener("click", function () {
+            giveFeedback(5, 2.00,
+                "Try looking for people in your area to carpool with. Driving alone may be the convenient way, but it ends up being both costly for you and the environment.",
+                "q2", [walkbike, publictransit, carpool, drive]);
+        });
+        //q3
+        const fancy = document.getElementById("q3a1");
+        const fastfood = document.getElementById("q3a2");
+        const casual = document.getElementById("q3a3");
+        fancy.addEventListener("click", function () {
+            giveFeedback(5, 15.00,
+                "Consider going out less often - the costs of getting food from a restaurant rack up very quickly.",
+                "q3", [fancy, fastfood, casual]);
+        });
+        fastfood.addEventListener("click", function () {
+            giveFeedback(5, 6.00,
+                "Consider home-cooked meals more often; eating out regularly costs more than you might expect, and fast food creates tons of trash.",
+                "q3", [fancy, fastfood, casual]);
+        });
+        casual.addEventListener("click", function () {
+            giveFeedback(5, 9.00,
+                "Consider going out for food less often. Instead, try learning to cook those same recipes as home. It costs both you and the environment to be eating out often.",
+                "q3", [fancy, fastfood, casual]);
+        });
+        //q4
+        const styrofoam = document.getElementById("q4a1");
+        const container = document.getElementById("q4a2");
+        const leave = document.getElementById("q4a3");
+        styrofoam.addEventListener("click", function () {
+            giveFeedback(5, 0.00,
+                "Consider using your own container. A takeout box may be convenient, but it racks up to a lot of trash that can neither be recycled nor reused.",
+                "q4", [styrofoam, container, leave]);
+        });
+        container.addEventListener("click", function () {
+            giveFeedback(5, 3.00,
+                "Good choice! Keep it up :)",
+                "q4", [styrofoam, container, leave]);
+        });
+        leave.addEventListener("click", function () {
+            giveFeedback(5, 2.00,
+                "Try bringing your own container to take food home. It'll save you on the cost of your next meal, and will lower the amount of food waste produced.",
+                "q4", [styrofoam, container, leave]);
+        });
+        //q5
+        const park = document.getElementById("q5a1");
+        const movie = document.getElementById("q5a2");
+        const vroom = document.getElementById("q5a3");
+        const escaperoom = document.getElementById("q5a4");
+        park.addEventListener("click", function () {
+            giveFeedback(5, 0.00, "Good choice! Isn't the park so nice? :)", "q5", [park, movie, vroom,
+                escaperoom
+            ]);
+        });
+        movie.addEventListener("click", function () {
+            giveFeedback(5, 12.00,
+                "Try going to the movies less often. It's overpriced and not a need; consider going to the park instead. You could even try cooking together!",
+                "q5", [park, movie, vroom, escaperoom]);
+        });
+        vroom.addEventListener("click", function () {
+            giveFeedback(5, 3.00,
+                "Please consider biking or walking around aimlessly instead. Driving the car creates costs in gas, and is extremely bad for the environment.",
+                "q5", [park, movie, vroom, escaperoom]);
+        });
+        escaperoom.addEventListener("click", function () {
+            giveFeedback(5, 25.00,
+                "Consider a cheaper, but equally or more sustainable, option. May I suggest cooking or baking together?",
+                "q5", [park, movie, vroom, escaperoom]);
+        });
+        //q6
+        const thrift = document.getElementById("q6a1");
+        const ethical = document.getElementById("q6a2");
+        const fastfashion = document.getElementById("q6a3");
+        const designer = document.getElementById("q6a4");
+        thrift.addEventListener("click", function () {
+            giveFeedback(1, 6.00,
+                "This is a good choice, as long as you aren't buying too much clothing too often.", "q6", [
+                    thrift, ethical, fastfashion, designer
+                ]);
+        });
+        ethical.addEventListener("click", function () {
+            giveFeedback(1, 60.00,
+                "Make sure you aren't purchasing new clothing too often. Purchasing more than you need both depletes your savings and produces more waste in the long run.",
+                "q6", [thrift, ethical, fastfashion, designer]);
+        });
+        fastfashion.addEventListener("click", function () {
+            giveFeedback(1, 35.00,
+                "Consider getting clothing that can be worn for longer. Fast fashion moves quickly to the markets, but also very quickly to the landfills.",
+                "q6", [thrift, ethical, fastfashion, designer]);
+        });
+        designer.addEventListener("click", function () {
+            giveFeedback(1, 250.00,
+                "Make sure you practice minimalism if you truly want to stay on top of fashion trends: have very few articles of clothing, but that are valuable to you.",
+                "q6", [thrift, ethical, fastfashion, designer]);
+        });
+        //q7
+        const repurpose = document.getElementById("q7a1");
+        const donate = document.getElementById("q7a2");
+        const throwout = document.getElementById("q7a3");
+        const closet = document.getElementById("q7a4");
+        repurpose.addEventListener("click", function () {
+            giveFeedback(1, 1.00,
+                "Make sure that you're repurposing the clothing into things you will use, and not throw out too soon. If that's the case, this is an amazing choice!",
+                "q7", [
+                    repurpose, donate, throwout, closet
+                ]);
+        });
+        donate.addEventListener("click", function () {
+            giveFeedback(1, 0.00,
+                "This is a good choice. Reminder to make sure that the clothing you're donating is new or otherwise in good condition!",
+                "q7", [repurpose, donate, throwout, closet]);
+        });
+        throwout.addEventListener("click", function () {
+            giveFeedback(1, 5.00,
+                "Consider repurposing or donating clothing that is the wrong size. Throwing it out creates a lot of waste.",
+                "q7", [repurpose, donate, throwout, closet]);
+        });
+        closet.addEventListener("click", function () {
+            giveFeedback(1, 0.00,
+                "Make a decision as to what you will do with the piece of clothing. If it just sits in your closet, you may eventually choose to throw it out, rather than give it new life.",
+                "q7", [repurpose, donate, throwout, closet]);
+        });
+        //q8
+        const reusable = document.getElementById("q8a1");
+        const plastic = document.getElementById("q8a2");
+        const straw = document.getElementById("q8a3");
+        reusable.addEventListener("click", function () {
+            giveFeedback(1, 25.00,
+                "Good choice! Make sure your water bottle isn't easily broken, or you'll keep adding to the landfills and subtracting from your bank account unintentionally.",
+                "q8", [reusable, plastic, straw]);
+        });
+        plastic.addEventListener("click", function () {
+            giveFeedback(5, 3.00,
+                "Consider getting a reusable water bottle if possible. The amount of plastic waste that comes from throwing water bottles out, and waster waste of improperly disposed bottles, is enormous.",
+                "q8", [reusable, plastic, straw]);
+        });
+        straw.addEventListener("click", function () {
+            giveFeedback(5, 2.00,
+                "If you require this type of drink, please consider bringing your own reusable straw.",
+                "q8", [reusable, plastic, straw]);
+        });
+        //q9
+        const disposable = document.getElementById("q9a1");
+        const utensils = document.getElementById("q9a2");
+        disposable.addEventListener("click", function () {
+            giveFeedback(5, 1.00,
+                "Consider using your own reusable utensils whenever possible. Disposable utensils end up in waterways and end up costing a lot.",
+                "q9", [disposable, utensils]);
+        });
+        utensils.addEventListener("click", function () {
+            giveFeedback(1, 5.00,
+                "That's commitment! Keep at it, you're making an awesome difference.",
+                "q9", [disposable, utensils]);
         });
     </script>
 </body>
