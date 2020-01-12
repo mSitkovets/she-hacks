@@ -2,175 +2,169 @@
 <html lang="en">
 
 <head>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <title>Game</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-  <script>
-    const name = "Maria";
-    let balance = 500;
-  </script>
+    <title>Game</title>
 </head>
 
 <body style="background-color: #8FBC94; color:#56445D">
-  <h1>Hello <script>
-      document.write(name)
-    </script>, your balance is: <script>
-      document.write(balance)
-    </script>
-  </h1>
-  <br>
+    <h1>Hello *name*, your balance is: *balance*</h1>
+    <br>
 
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false" data-wrap="false">
-    <div class="carousel-inner">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false"
+        data-wrap="false">
+        <div class="carousel-inner">
 
-      <!-- first question -->
-      <div id="q1" class="carousel-item active" style="width: 100%; height: 600px; vertical-align: middle;">
-        <div class="align-middle" style="text-align: center; padding: 70px 0;">
-          <h1 style="vertical-align: middle">Where do you go for drinks?</h1>
-          <br>
-          <button type="button" class="btn btn-secondary" style="width:250px;" id="q1a1"><img
-              src="http://www.pngall.com/wp-content/uploads/4/Starbucks-Cup.png" height="200"><br>
-            <h3>Starbucks</h3>
-          </button>
-          <button type="button" class="btn btn-secondary" style="width:250px;" id="q1a2"><img
-              src="https://projideas.com/images/tim-hortons-cup-clipart-1.png" height="200"><br>
-            <h3>Tim Hortons</h3>
-          </button>
-          <button type="button" class="btn btn-secondary" style="width:250px;" id="q1a3"><img
-              src="https://www.pngkey.com/png/full/297-2973186_paper-coffee-cups-png-download-coffee-cup-to.png"
-              height="200"><br>
-            <h3>Hipster Café</h3>
-          </button>
+            <!-- intro -->
+            <div class="carousel-item active"
+                style="width: 100%; height: 600px; vertical-align: middle; text-align: center; padding: 70px 0;">
+                <div class="align-middle">
+                    <h1>Rules</h1>
+                    <h3>Depending the following questions, your balance will either</h3>
+                    <h3>decrease or stay the same. There is also a sustainable score with feedback</h3>
+                    <h3>that will be shown at the end of the game.</h3>
+                    <br>
+                    <button type="button" href="#carouselExampleControls" class="btn btn-secondary" style="width:250px;"
+                        data-slide="next">
+                        <h3>Start the game!</h3>
+                    </button>
+                </div>
+            </div>
+
+            <!-- first question -->
+            <div class="carousel-item" style="width: 100%; height: 600px; vertical-align: middle;">
+                <div class="align-middle" style="text-align: center; padding: 70px 0;">
+                    <h1 style="vertical-align: middle">Where do you go for drinks?</h1>
+                    <br>
+                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                            src="http://www.pngall.com/wp-content/uploads/4/Starbucks-Cup.png" height="200"><br>
+                        <h3>Starbucks</h3>
+                    </button>
+                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                            src="https://projideas.com/images/tim-hortons-cup-clipart-1.png" height="200"><br>
+                        <h3>Tim Hortons</h3>
+                    </button>
+                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                            src="https://www.pngkey.com/png/full/297-2973186_paper-coffee-cups-png-download-coffee-cup-to.png"
+                            height="200"><br>
+                        <h3>Hipster Café</h3>
+                    </button>
+                </div>
+            </div>
+
+            <!-- second question -->
+            <div class="carousel-item" style="width: 100%; height: 600px; vertical-align: middle;">
+                <div class="align-middle" style="text-align: center; padding: 70px 0;">
+                    <h1 style="vertical-align: middle">How do you commute to school/work?</h1>
+                    <br>
+                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                            src="https://static.wixstatic.com/media/2cd43b_94a8d7b8ac984de9b81f672eb95d82fd~mv2_d_1979_1399_s_2.png?dn=2cd43b_94a8d7b8ac984de9b81f672eb95d82fd~mv2_d_1979_1399_s_2.png"
+                            height="100"><br>
+                        <h3>Walk/Bike</h3>
+                    </button>
+                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                            src="https://cdn.clipart.email/c40c028aba6dafd2ea8cb0be86848b1a_white-bus-png-clipart-best-web-clipart_2500-1733.png"
+                            height="100"><br>
+                        <h3>Public Transit</h3>
+                    </button>
+                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                            src="https://cdn3.iconfinder.com/data/icons/hotel-information-system-1/64/Artboard_15-512.png"
+                            height="100"><br>
+                        <h3>Carpool</h3>
+                    </button>
+                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                            src="http://pngimg.com/uploads/mercedes/mercedes_PNG80135.png"
+                            height="100"><br>
+                        <h3>Drive</h3>
+                    </button>
+                </div>
+            </div>
+
+            <!-- third question -->
+            <div class="carousel-item" style="width: 100%; height: 600px; vertical-align: middle;">
+                    <div class="align-middle" style="text-align: center; padding: 70px 0;">
+                        <h1 style="vertical-align: middle">Which would be your go to restaurant?</h1>
+                        <br>
+                        <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                                src="https://static.wixstatic.com/media/2cd43b_94a8d7b8ac984de9b81f672eb95d82fd~mv2_d_1979_1399_s_2.png?dn=2cd43b_94a8d7b8ac984de9b81f672eb95d82fd~mv2_d_1979_1399_s_2.png"
+                                height="100"><br>
+                            <h3>Walk/Bike</h3>
+                        </button>
+                        <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                                src="https://cdn.clipart.email/c40c028aba6dafd2ea8cb0be86848b1a_white-bus-png-clipart-best-web-clipart_2500-1733.png"
+                                height="100"><br>
+                            <h3>Public Transit</h3>
+                        </button>
+                        <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                                src="https://cdn3.iconfinder.com/data/icons/hotel-information-system-1/64/Artboard_15-512.png"
+                                height="100"><br>
+                            <h3>Carpool</h3>
+                        </button>
+                        <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                                src="http://pngimg.com/uploads/mercedes/mercedes_PNG80135.png"
+                                height="100"><br>
+                            <h3>Drive</h3>
+                        </button>
+                    </div>
+                </div>
+
         </div>
-
-      </div>
-
-      <!-- second question -->
-      <div class="carousel-item " style="width: 100%; height: 600px; vertical-align: middle;">
-        <div class="align-middle" style="text-align: center; padding: 70px 0;">
-          <h1 style="vertical-align: middle">How do you commute to school/work?</h1>
-          <br>
-          <button type="button" class="btn btn-secondary button" style="width:250px;"><img
-              src="http://www.pngall.com/wp-content/uploads/4/Starbucks-Cup.png" height="200"><br>
-            <h3>Starbucks</h3>
-          </button>
-          <button type="button" class="btn btn-secondary button" style="width:250px;"><img
-              src="https://projideas.com/images/tim-hortons-cup-clipart-1.png" height="200"><br>
-            <h3>Tim Hortons</h3>
-          </button>
-          <button type="button" class="btn btn-secondary button" style="width:250px;"><img
-              src="https://www.pngkey.com/png/full/297-2973186_paper-coffee-cups-png-download-coffee-cup-to.png"
-              height="200"><br>
-            <h3>Hipster Café</h3>
-          </button>
-        </div>
-
-      </div>
-
     </div>
-    <div class="carousel-item " style="width: 100%; height: 600px; vertical-align: middle;">
-
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
     </div>
-  </div>
-  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">Next</span>
-  </a>
-  </div>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-  </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script>
+        var carouselLength = $('.carousel-item').length - 1;
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-  </script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-  </script>
-  <script>
-    var carouselLength = $('.carousel-item').length - 1;
+// If there is more than one item
+if (carouselLength) {
+    $('.carousel-control-next').removeClass('d-none');
+}
 
-    // If there is more than one item
-    if (carouselLength) {
-      $('.carousel-control-next').removeClass('d-none');
-    }
-
-    $('.carousel').carousel({
-      interval: false,
-      wrap: false
-    }).on('slide.bs.carousel', function (e) {
-      // First one
-      if (e.to == 0) {
+$('.carousel').carousel({
+    interval: false,
+    wrap: false
+}).on('slide.bs.carousel', function (e) {
+    // First one
+    if (e.to == 0) {
         $('.carousel-control-prev').addClass('d-none');
         $('.carousel-control-next').addClass('d-none');
-      } // Last one
-      else if (e.to == carouselLength) {
+    } // Last one
+    else if (e.to == carouselLength) {
         $('.carousel-control-prev').removeClass('d-none');
         $('.carousel-control-next').addClass('d-none');
-      } // The rest
-      else {
+    } // The rest
+    else {
         $('.carousel-control-prev').removeClass('d-none');
         $('.carousel-control-next').removeClass('d-none');
-      }
-    });
-  </script>
-  <script>
-    function giveFeedback(num, cost, feedback, id) {
-      let moneySpent = num * cost * 4;
-      balance -= moneySpent;
-
-      let para = document.createElement("p");
-      let node = document.createTextNode(
-        `The money you would spend would be $${moneySpent}/month if you spend on average $${cost} around ${num} times per week. Your monthly balance decreases to ${balance} as a result. Feedback: ${feedback}.`
-      );
-      para.appendChild(node);
-
-      let element = document.getElementById(id);
-      element.appendChild(para);
-
-      starbucks.disabled = true;
-      tims.disabled = true;
-      hipster.disabled = true;
     }
-
-    const starbucks = document.getElementById("q1a1");
-    const tims = document.getElementById("q1a2");
-    const hipster = document.getElementById("q1a3");
-    starbucks.addEventListener("click", function () {
-      giveFeedback(5, 3.00, "Too much money", "q1");
-    });
-    tims.addEventListener("click", function () {
-      giveFeedback("good", "q1");
-    });
-    hipster.addEventListener("click", function () {
-      giveFeedback("Too", "q1");
-    });
-  </script>
+});
+    </script>
 </body>
 
 </html>
