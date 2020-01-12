@@ -80,8 +80,7 @@
                         <h3>Carpool</h3>
                     </button>
                     <button type="button" class="btn btn-secondary" style="width:250px;"><img
-                            src="http://pngimg.com/uploads/mercedes/mercedes_PNG80135.png"
-                            height="100"><br>
+                            src="http://pngimg.com/uploads/mercedes/mercedes_PNG80135.png" height="100"><br>
                         <h3>Drive</h3>
                     </button>
                 </div>
@@ -89,31 +88,30 @@
 
             <!-- third question -->
             <div class="carousel-item" style="width: 100%; height: 600px; vertical-align: middle;">
-                    <div class="align-middle" style="text-align: center; padding: 70px 0;">
-                        <h1 style="vertical-align: middle">Which would be your go to restaurant?</h1>
-                        <br>
-                        <button type="button" class="btn btn-secondary" style="width:250px;"><img
-                                src="https://static.wixstatic.com/media/2cd43b_94a8d7b8ac984de9b81f672eb95d82fd~mv2_d_1979_1399_s_2.png?dn=2cd43b_94a8d7b8ac984de9b81f672eb95d82fd~mv2_d_1979_1399_s_2.png"
-                                height="100"><br>
-                            <h3>Walk/Bike</h3>
-                        </button>
-                        <button type="button" class="btn btn-secondary" style="width:250px;"><img
-                                src="https://cdn.clipart.email/c40c028aba6dafd2ea8cb0be86848b1a_white-bus-png-clipart-best-web-clipart_2500-1733.png"
-                                height="100"><br>
-                            <h3>Public Transit</h3>
-                        </button>
-                        <button type="button" class="btn btn-secondary" style="width:250px;"><img
-                                src="https://cdn3.iconfinder.com/data/icons/hotel-information-system-1/64/Artboard_15-512.png"
-                                height="100"><br>
-                            <h3>Carpool</h3>
-                        </button>
-                        <button type="button" class="btn btn-secondary" style="width:250px;"><img
-                                src="http://pngimg.com/uploads/mercedes/mercedes_PNG80135.png"
-                                height="100"><br>
-                            <h3>Drive</h3>
-                        </button>
-                    </div>
+                <div class="align-middle" style="text-align: center; padding: 70px 0;">
+                    <h1 style="vertical-align: middle">Which would be your go to restaurant?</h1>
+                    <br>
+                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                            src="https://static.wixstatic.com/media/2cd43b_94a8d7b8ac984de9b81f672eb95d82fd~mv2_d_1979_1399_s_2.png?dn=2cd43b_94a8d7b8ac984de9b81f672eb95d82fd~mv2_d_1979_1399_s_2.png"
+                            height="100"><br>
+                        <h3>Walk/Bike</h3>
+                    </button>
+                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                            src="https://cdn.clipart.email/c40c028aba6dafd2ea8cb0be86848b1a_white-bus-png-clipart-best-web-clipart_2500-1733.png"
+                            height="100"><br>
+                        <h3>Public Transit</h3>
+                    </button>
+                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                            src="https://cdn3.iconfinder.com/data/icons/hotel-information-system-1/64/Artboard_15-512.png"
+                            height="100"><br>
+                        <h3>Carpool</h3>
+                    </button>
+                    <button type="button" class="btn btn-secondary" style="width:250px;"><img
+                            src="http://pngimg.com/uploads/mercedes/mercedes_PNG80135.png" height="100"><br>
+                        <h3>Drive</h3>
+                    </button>
                 </div>
+            </div>
 
         </div>
     </div>
@@ -141,29 +139,29 @@
     <script>
         var carouselLength = $('.carousel-item').length - 1;
 
-// If there is more than one item
-if (carouselLength) {
-    $('.carousel-control-next').removeClass('d-none');
-}
+        // If there is more than one item
+        if (carouselLength) {
+            $('.carousel-control-next').removeClass('d-none');
+        }
 
-$('.carousel').carousel({
-    interval: false,
-    wrap: false
-}).on('slide.bs.carousel', function (e) {
-    // First one
-    if (e.to == 0) {
-        $('.carousel-control-prev').addClass('d-none');
-        $('.carousel-control-next').addClass('d-none');
-    } // Last one
-    else if (e.to == carouselLength) {
-        $('.carousel-control-prev').removeClass('d-none');
-        $('.carousel-control-next').addClass('d-none');
-    } // The rest
-    else {
-        $('.carousel-control-prev').removeClass('d-none');
-        $('.carousel-control-next').removeClass('d-none');
-    }
-});
+        $('.carousel').carousel({
+            interval: false,
+            wrap: false
+        }).on('slide.bs.carousel', function (e) {
+            // First one
+            if (e.to == 0) {
+                $('.carousel-control-prev').addClass('d-none');
+                $('.carousel-control-next').addClass('d-none');
+            } // Last one
+            else if (e.to == carouselLength) {
+                $('.carousel-control-prev').removeClass('d-none');
+                $('.carousel-control-next').addClass('d-none');
+            } // The rest
+            else {
+                $('.carousel-control-prev').removeClass('d-none');
+                $('.carousel-control-next').removeClass('d-none');
+            }
+        });
     </script>
 </body>
 
