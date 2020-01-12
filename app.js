@@ -23,9 +23,9 @@ function game() {
 
     var options = {
         method: 'GET',
-        url: `https://api.typeform.com/forms/lHSJDm/responses?since=2020-01-12T03:09:51Z`,
+        url: `https://api.typeform.com/forms/lHSJDm/responses?since=${date_obj}`,
         qs: {
-            since: '2020-01-12T03:09:51Z'
+            since: `${date_obj}`
         },
         headers: {
             'cache-control': 'no-cache',
