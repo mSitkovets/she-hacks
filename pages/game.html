@@ -11,20 +11,23 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <title>Game</title>
-
-    <script>
+    <title>Journey into your Sustainable Budgeting</title>
+    <style>
+        .btn-light {
+            background-color: #FFEFD3;
+            color: #2F2504;
+        }
+    </style>
+    <!-- <script>
         const name = "Maria";
         let balance = 500;
-    </script>
+    </script> -->
 </head>
 
-<body style="background-color: #8FBC94; color:#56445D">
-    <h1>Hello <script>
-            document.write(name)
-        </script>, your balance is: <script>
-            document.write(balance)
-        </script>
+<body style="background-color: #C7DFC5; color:#548687">
+    <h1 style="margin-left: 30px; color: #2F2504">Hello 
+        <span id="name">Maria</span>, your balance is:
+        <span id="balance">500</span>
     </h1>
     <br>
 
@@ -36,32 +39,33 @@
             <div class="carousel-item active"
                 style="width: 100%; height: 600px; vertical-align: middle; text-align: center; padding: 70px 0;">
                 <div class="align-middle">
-                    <h1>Rules</h1>
-                    <h3>Depending the following questions, your balance will either</h3>
-                    <h3>decrease or stay the same. There is also a sustainable score with feedback</h3>
-                    <h3>that will be shown at the end of the game.</h3>
+                    <h1><b>Rules</b></h1>
+                    <h3 style="margin-left:25%; margin-right:25%">Depending the following questions, your balance will
+                        either
+                        decrease or stay the same. There is also a sustainable score with feedback
+                        that will be shown at the end of the game.</h3>
                     <br>
-                    <button type="button" href="#carouselExampleControls" class="btn btn-secondary" style="width:250px;"
-                        data-slide="next">
-                        <h3>Start the game!</h3>
+                    <button type="button" href="#carouselExampleControls" class="btn btn-light"
+                        style="width:250px; font-size:25px;" data-slide="next">
+                        Start the game!
                     </button>
                 </div>
             </div>
 
             <!-- first question -->
-            <div id="q1" class="carousel-item" style="width: 100%; height: 600px; vertical-align: middle;">
+            <div id="q1" class="carousel-item" style="width: 100%; height: 800px; vertical-align: middle;">
                 <div class="align-middle" style="text-align: center; padding: 70px 0;">
                     <h1 style="vertical-align: middle">Where do you go for drinks?</h1>
                     <br>
-                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q1a1"><img
+                    <button type="button" class="btn btn-light" style="width:250px;" id="q1a1"><img
                             src="http://www.pngall.com/wp-content/uploads/4/Starbucks-Cup.png" height="200"><br>
                         <h3>Starbucks</h3>
                     </button>
-                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q1a2"><img
+                    <button type="button" class="btn btn-light" style="width:250px;" id="q1a2"><img
                             src="https://projideas.com/images/tim-hortons-cup-clipart-1.png" height="200"><br>
                         <h3>Tim Hortons</h3>
                     </button>
-                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q1a3"><img
+                    <button type="button" class="btn btn-light" style="width:250px;" id="q1a3"><img
                             src="https://www.pngkey.com/png/full/297-2973186_paper-coffee-cups-png-download-coffee-cup-to.png"
                             height="200"><br>
                         <h3>Hipster Café</h3>
@@ -74,22 +78,22 @@
                 <div class="align-middle" style="text-align: center; padding: 70px 0;">
                     <h1 style="vertical-align: middle">How do you commute to school/work?</h1>
                     <br>
-                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q2a1"><img
+                    <button type="button" class="btn btn-light" style="width:250px;" id="q2a1"><img
                             src="https://static.wixstatic.com/media/2cd43b_94a8d7b8ac984de9b81f672eb95d82fd~mv2_d_1979_1399_s_2.png?dn=2cd43b_94a8d7b8ac984de9b81f672eb95d82fd~mv2_d_1979_1399_s_2.png"
                             height="100"><br>
                         <h3>Walk/Bike</h3>
                     </button>
-                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q2a2"><img
+                    <button type="button" class="btn btn-light" style="width:250px;" id="q2a2"><img
                             src="https://cdn.clipart.email/c40c028aba6dafd2ea8cb0be86848b1a_white-bus-png-clipart-best-web-clipart_2500-1733.png"
                             height="100"><br>
                         <h3>Public Transit</h3>
                     </button>
-                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q2a3"><img
+                    <button type="button" class="btn btn-light" style="width:250px;" id="q2a3"><img
                             src="https://cdn3.iconfinder.com/data/icons/hotel-information-system-1/64/Artboard_15-512.png"
                             height="100"><br>
                         <h3>Carpool</h3>
                     </button>
-                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q2a4"><img
+                    <button type="button" class="btn btn-light" style="width:250px;" id="q2a4"><img
                             src="http://pngimg.com/uploads/mercedes/mercedes_PNG80135.png" height="100"><br>
                         <h3>Drive</h3>
                     </button>
@@ -101,24 +105,113 @@
                 <div class="align-middle" style="text-align: center; padding: 70px 0;">
                     <h1 style="vertical-align: middle">Which would be your go to restaurant?</h1>
                     <br>
-                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q3a1"><img
-                            src="https://static.wixstatic.com/media/2cd43b_94a8d7b8ac984de9b81f672eb95d82fd~mv2_d_1979_1399_s_2.png?dn=2cd43b_94a8d7b8ac984de9b81f672eb95d82fd~mv2_d_1979_1399_s_2.png"
+                    <button type="button" class="btn btn-light" style="width:300px;" id="q3a1"><img
+                            src="https://cdn4.iconfinder.com/data/icons/ecology-and-environment-filled-outline/50/Environment_Filled_Outline-14-512.png"
                             height="100"><br>
-                        <h3>Walk/Bike</h3>
+                        <h3>Fancy zero-waste dinner</h3>
                     </button>
-                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q3a2"><img
-                            src="https://cdn.clipart.email/c40c028aba6dafd2ea8cb0be86848b1a_white-bus-png-clipart-best-web-clipart_2500-1733.png"
+                    <button type="button" class="btn btn-light" style="width:300px;" id="q3a2"><img
+                            src="https://i.pinimg.com/originals/6c/8f/eb/6c8febf3d6a276329c012a598f82d0c6.png"
                             height="100"><br>
-                        <h3>Public Transit</h3>
+                        <h3>Fast food restaurant</h3>
                     </button>
-                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q3a3"><img
-                            src="https://cdn3.iconfinder.com/data/icons/hotel-information-system-1/64/Artboard_15-512.png"
+                    <button type="button" class="btn btn-light" style="width:300px;" id="q3a3"><img
+                            src="https://i.pinimg.com/originals/51/65/3b/51653b88424b6bb0a834b50e8550ecaa.png"
                             height="100"><br>
-                        <h3>Carpool</h3>
+                        <h3>Casual dining place</h3>
                     </button>
-                    <button type="button" class="btn btn-secondary" style="width:250px;" id="q3a4"><img
-                            src="http://pngimg.com/uploads/mercedes/mercedes_PNG80135.png" height="100"><br>
-                        <h3>Drive</h3>
+                </div>
+            </div>
+
+
+            <!-- fourth question -->
+            <div class="carousel-item" style="width: 100%; height: 600px; vertical-align: middle;">
+                <div class="align-middle" style="text-align: center; padding: 70px 0;">
+                    <h1 style="vertical-align: middle">Where would you go for fun?</h1>
+                    <br>
+                    <button type="button" class="btn btn-light" style="width:270px;"><img
+                            src="https://png.pngtree.com/element_our/sm/20180301/sm_5a981ce121ace.png" height="150"><br>
+                        <h3>Local park</h3>
+                    </button>
+                    <button type="button" class="btn btn-light" style="width:270px;"><img
+                            src="https://belleneige.com/wp-content/uploads/2019/07/movie-popcorn-png-9.png"
+                            height="150"><br>
+                        <h3>Movie theatre</h3>
+                    </button>
+                    <button type="button" class="btn btn-light" style="width:270px;"><img
+                            src="http://media-s3-us-east-1.ceros.com/g3-communications/images/2016/03/29/fa59607031df8310df417f74cf15f766/hands-steering-wheel.png"
+                            height="150"><br>
+                        <h3>Drive around aimlessly</h3>
+                    </button>
+                    <button type="button" class="btn btn-light" style="width:270px;"><img
+                            src="https://escaperoomvirginiapeninsula.com/images/ervp_logo_icon.png" height="150"><br>
+                        <h3>Escape room</h3>
+                    </button>
+                </div>
+            </div>
+
+            <!-- fifth question -->
+            <div class="carousel-item" style="width: 100%; height: 600px; vertical-align: middle;">
+                <div class="align-middle" style="text-align: center; padding: 70px 0;">
+                    <h1 style="vertical-align: middle">What is your choice of clothing store?</h1>
+                    <br>
+                    <button type="button" class="btn btn-light" style="width:275px; height:247px"><br><br><br><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/c/ca/Everlane_logo.png"
+                            width="250"><br><br><br>
+                        <h3>High-end ethically<br>sourced</h3>
+                    </button>
+                    <button type="button" class="btn btn-light" style="width:275px; height:247px"><br><br><img
+                            src="https://www.valuevillage.com/sites/all/themes/valuevillage/logo.png" width="250">
+                        <h3>Thrift stores</h3>
+                    </button>
+                    <button type="button" class="btn btn-light" style="width:275px; height:247px"><img
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/709px-H%26M-Logo.svg.png"
+                            width="220"><br>
+                        <h3>Fast fashion stores</h3>
+                    </button>
+                    <button type="button" class="btn btn-light" style="width:275px; height:247px"><img
+                            src="https://www.stickpng.com/assets/images/5842951fa6515b1e0ad75ad0.png" width="120"><br>
+                        <h3>High-end designer</h3>
+                    </button>
+                </div>
+            </div>
+
+            <!-- sixth question -->
+            <div class="carousel-item" style="width: 100%; height: 600px; vertical-align: middle;">
+                <div class="align-middle" style="text-align: center; padding: 70px 0;">
+                    <h1 style="vertical-align: middle">What do you do if it's the wrong size?</h1>
+                    <br>
+                    <button type="button" class="btn btn-light" style="width:275px;"><img
+                            src="https://www.coquitlamfirefighterscharity.com/uploads/1/1/7/9/117951410/clothing-drive-300x200_3.png"
+                            height="150"><br>
+                        <h3>Donate/Hand-me-down<br>sourced</h3>
+                    </button>
+                    <button type="button" class="btn btn-light" style="width:275px;"><img
+                            src="https://www.stickpng.com/assets/images/5c41d441e39d5d01c21da911.png" height="176"><br>
+                        <h3>Throw it out</h3>
+                    </button>
+                    <button type="button" class="btn btn-light" style="width:275px;"><img
+                            src="https://simplerecycling.com/wp-content/uploads/2017/08/shirt.png" height="176"><br>
+                        <h3>Repurpose</h3>
+                    </button>
+                    <button type="button" class="btn btn-light" style="width:275px;"><img
+                            src="https://purepng.com/public/uploads/medium/purepng.com-closetclosetalmirahsnuggerycabinet-1701527922855gahxn.png"
+                            height="176"><br>
+                        <h3>Keep in closet forever</h3>
+                    </button>
+                </div>
+            </div>
+
+            <!-- outro -->
+            <div class="carousel-item"
+                style="width: 100%; height: 600px; vertical-align: middle; text-align: center; padding: 70px 0;">
+                <div class="align-middle">
+                    <h1><b>Result</b></h1>
+                    <h3>Click the button to get you overall results and feedback!</h3>
+                    <br>
+                    <button type="button" href="#carouselExampleControls" class="btn btn-light"
+                        style="width:250px; font-size:25px;" data-slide="next">
+                        Click me!
                     </button>
                 </div>
             </div>
@@ -139,13 +232,13 @@
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
         integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
-    </script>
+        </script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
-    </script>
+        </script>
     <script>
         var carouselLength = $('.carousel-item').length - 1;
 
@@ -164,7 +257,7 @@
                 $('.carousel-control-next').addClass('d-none');
             } // Last one
             else if (e.to == carouselLength) {
-                $('.carousel-control-prev').removeClass('d-none');
+                $('.carousel-control-prev').addClass('d-none');
                 $('.carousel-control-next').addClass('d-none');
             } // The rest
             else {
@@ -174,14 +267,19 @@
         });
     </script>
     <script>
+
+        let balance_amount = 500;
+
         function giveFeedback(num, cost, feedback, id, choices) {
             let moneySpent = num * cost * 4;
-            balance -= moneySpent;
+            balance_amount -= moneySpent;
+            document.getElementById("balance").innerHTML = balance_amount;
 
             let para = document.createElement("p");
             let node = document.createTextNode(
-                `The money you would spend would be $${moneySpent}/month if you spend on average $${cost} around ${num} times per week. Your monthly balance decreases to ${balance} as a result. Feedback: ${feedback}.`
+                `The money you would spend would be $${moneySpent}/month if you spend on average $${cost} around ${num} times per week. Your monthly balance decreases to ${balance_amount} as a result. Feedback: ${feedback}`
             );
+            // node.style.fontSize = "100px";
             para.appendChild(node);
 
             let element = document.getElementById(id);
@@ -194,6 +292,15 @@
             array.map(a =>
                 a.disabled = true)
         }
+
+        //style
+        var elem = document.createElement('style');
+        elem.appendChild(document.createTextNode('body p { margin-left:500px; margin-right:500px; padding:20px; background: #FFEFD3; color: #2F2504; }'));
+        
+        // appending another rules
+
+        document.head.appendChild(elem);
+
         //q1
         const starbucks = document.getElementById("q1a1");
         const tims = document.getElementById("q1a2");
